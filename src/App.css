@@ -5,11 +5,39 @@
     border-radius: 15px;
     border: 2px solid grey;
     padding-bottom: 25px;
+
 }
+
+.logo-container {
+    grid-area: logo;
+    width: 100%;
+    margin-top: 30px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.App {
+    display: grid;
+    grid-template-columns: repeat(4, 105px);
+    grid-template-rows: auto, auto, repeat(5, 2fr);
+    grid-template-areas:
+        "logo logo logo logo"
+        "display display display display"
+        "special special special operator"
+        "number number number operator"
+        "number number number operator"
+        "number number number operator"
+        "number number number operator";
+    justify-items: center;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    grid-gap: 15px;
+}
+
 .display {
-    margin-top: 25px;
     height: 100px;
-    width: 450px;
+    width: 425px;
     border-radius: 50px;
     color: white;
     background-color: #322c2d;
@@ -19,4 +47,121 @@
     align-items: flex-end;
     padding-right: 8%;
     font-size: 5.0rem;
+    grid-area: display;
   }
+
+.specials {
+    grid-area: special;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    grid-gap: 15px;
+    justify-items: center;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+}
+
+.numbers {
+    grid-area: number;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-gap: 15px;
+    justify-items: center;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+}
+
+.operators {
+    grid-area: operator;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 1fr);
+    grid-gap: 15px;
+    justify-items: center;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+}
+
+.special-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(49, 93, 153);
+    font-size: 28px;
+    font-weight: bold;
+    color: white;
+    width: 105px;
+    height: 105px;
+    border-radius: 50%;    
+    box-shadow: 0px 5px rgb(66, 19, 21);
+
+}
+
+.special-button:active {
+    background-color: rgb(28, 53, 87);
+
+}
+
+.numbers-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(35, 67, 117);
+    font-size: 28px;
+    font-weight: bold;
+    color: white;
+    width: 105px;
+    height: 105px;
+    border-radius: 50%;
+    box-shadow: 0px 5px rgb(66, 19, 21);
+}
+
+.numbers-button:active {
+    background-color: rgb(11, 22, 39);
+}
+
+.numbers-button-zero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(35, 67, 117);
+    font-size: 28px;
+    font-weight: bold;
+    color: white;
+    width: 225px;
+    height: 105px;
+    border-radius: 53px;
+    box-shadow: 0px 5px rgb(66, 19, 21);
+    grid-column-end: span 2;
+}
+
+.numbers-button-zero:active {
+    background-color: rgb(11, 22, 39);
+}
+
+.operators-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(58, 113, 144);
+    font-size: 28px;
+    font-weight: bold;
+    color: white;
+    width: 105px;
+    height: 105px;
+    border-radius: 50%;
+    box-shadow: 0px 5px rgb(66, 19, 21);
+
+}
+
+.operators-button:active {
+    background-color: rgb(34, 66, 85);
+}
